@@ -1,7 +1,7 @@
 # app.py
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 import plotly.graph_objects as go
 import plotly.express as px
 
@@ -23,7 +23,7 @@ st.set_page_config(
 def load_model():
     """Load pre-trained model"""
     try:
-        model = pickle.load('final_model.sav')
+        model = joblib.load('final_model.sav')
         return model
     except FileNotFoundError:
         st.error("Error: 'final_model.sav' not found. Please ensure the model file is in the same directory.")
