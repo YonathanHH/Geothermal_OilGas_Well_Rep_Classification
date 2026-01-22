@@ -40,18 +40,6 @@ st.markdown("Enter the well parameters below to predict conversion feasibility."
 st.markdown("---")
 
 
-
-with st.sidebar:
-    st.header("Model Parameters")
-    st.info("Using 10 Numerical Features")
-    st.markdown("""
-    **Critical Factors:**
-    1. Temperature
-    2. Flow Rate Stability
-    3. Well Depth
-    """)
-
-
 if model:
     # Create 3 columns for cleaner layout
     col1, col2, col3 = st.columns(3)
